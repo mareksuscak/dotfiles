@@ -4,6 +4,10 @@
   default = current
 [color]
   ui = auto
+[commit]
+  gpgsign = true
+[credential]
+  helper = osxkeychain
 [alias]
   aa = add --all
   ap = add --patch
