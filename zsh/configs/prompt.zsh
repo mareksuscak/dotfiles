@@ -7,8 +7,17 @@ git_prompt_info() {
 }
 
 setopt promptsubst
-
 # Allow exported PS1 variable to override default prompt.
 if ! env | grep -q '^PS1='; then
   PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%c%{$reset_color%}$(git_prompt_info) %# '
 fi
+
+# modify the right prompt to contain vi mode indicator
+function zle-line-init zle-keymap-select {
+    VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
+    RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
+    zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
