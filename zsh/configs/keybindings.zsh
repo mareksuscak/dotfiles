@@ -16,6 +16,9 @@ bindkey "^N" insert-last-word
 bindkey "^Q" push-line-or-edit
 bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 
+# Fixes
+# https://dougblack.io/words/zsh-vi-mode.html
+
 # backspace and ^h working even after
 # returning from command mode
 bindkey "^?" backward-delete-char
