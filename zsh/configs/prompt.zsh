@@ -13,11 +13,16 @@ if ! env | grep -q '^PS1='; then
 fi
 
 # modify the right prompt to contain vi mode indicator
+function vi_mode_info() {
+  VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
+  RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
+}
+
 function zle-line-init zle-keymap-select {
-    VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
-    RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
+    vi_mode_info
     zle reset-prompt
 }
 
 zle -N zle-line-init
 zle -N zle-keymap-select
+vi_mode_info
