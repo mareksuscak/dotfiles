@@ -5,6 +5,9 @@ alias mkdir="mkdir -p"
 alias e="$EDITOR"
 alias v="$VISUAL"
 
+# Hub
+alias git=hub
+
 # Bundler
 alias b="bundle"
 
