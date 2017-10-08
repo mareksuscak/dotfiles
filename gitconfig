@@ -4,8 +4,6 @@
   default = current
 [color]
   ui = auto
-[commit]
-  gpgsign = true
 [credential]
   helper = osxkeychain
 [alias]
@@ -23,6 +21,7 @@
   ff = only
 [commit]
   template = ~/.gitmessage
+  gpgsign = true
 [fetch]
   prune = true
 [rebase]
