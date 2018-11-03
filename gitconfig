@@ -6,6 +6,7 @@
   ui = auto
 [credential]
   helper = osxkeychain
+	helpereval = "SSH_AUTH_SOCK=/var/folders/00/tksy24sx1txd_ggzsm2qlg_r0000gn/T//ssh-pXSzQbXjzOJT/agent.2916; export SSH_AUTH_SOCK;\nSSH_AGENT_PID=2917; export SSH_AGENT_PID;\necho Agent pid 2917;"
 [alias]
   aa = add --all
   ap = add --patch
@@ -30,3 +31,12 @@
   path = ~/.gitconfig.local
 [diff]
   colorMoved = zebra
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[user]
+	name = Marek Suscak
+	email = marek.suscak@gmail.com
+  signingKey = 02C3616D6178D603
