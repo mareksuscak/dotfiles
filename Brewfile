@@ -53,6 +53,9 @@ brew "python"
 # brew "postgres", restart_service: :changed
 # brew "redis", restart_service: :changed
 
+# Docker
+brew "wagoodman/dive/dive"
+
 # GUI apps
 cask "alfred"
 cask "authy"

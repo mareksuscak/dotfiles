@@ -46,3 +46,15 @@ _load_settings "$HOME/.zsh/configs"
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/marek/Projects/fanabulous/backend/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/marek/Projects/fanabulous/backend/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/marek/Projects/fanabulous/backend/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/marek/Projects/fanabulous/backend/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/marek/Projects/fanabulous/backend/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/marek/Projects/fanabulous/backend/node_modules/tabtab/.completions/slss.zsh
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/Cellar/terraform/0.11.13/bin/terraform terraform

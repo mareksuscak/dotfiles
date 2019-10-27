@@ -34,8 +34,8 @@
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
 [user]
-  name = Marek Suscak
-  email = marek.suscak@gmail.com
+	name = Marek Suscak
+	email = marek.suscak@gmail.com
   signingKey = 02C3616D6178D603
 [diff]
   colorMoved = zebra
