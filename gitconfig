@@ -39,3 +39,12 @@
   signingKey = 02C3616D6178D603
 [diff]
   colorMoved = zebra
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[user]
+	name = Marek Suscak
+	email = marek.suscak@gmail.com
+  signingKey = 6178D603
