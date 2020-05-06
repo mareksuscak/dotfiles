@@ -79,7 +79,7 @@ cask "quicklook-json"
 cask "skype"
 cask "slack"
 cask "softu2f
-cask "spectacle"
+cask "rectangle"
 cask "spotify"
 cask "tableplus"
 cask "transmission"
