@@ -8,7 +8,6 @@ brew "jq"
 brew "yq"
 brew "wget"
 brew "openssl"
-brew "dive"
 brew "thoughtbot/formulae/rcm"
 brew "reattach-to-user-namespace"
 brew "the_silver_searcher"
@@ -59,6 +58,9 @@ brew "python"
 
 # Docker
 brew "wagoodman/dive/dive"
+
+# Utils
+brew "mkcert"
 
 # GUI apps
 cask "alfred3"
