@@ -6,7 +6,9 @@ brew "git"
 brew "git-lfs"
 brew "jq"
 brew "yq"
+brew "wget"
 brew "openssl"
+brew "dive"
 brew "thoughtbot/formulae/rcm"
 brew "reattach-to-user-namespace"
 brew "the_silver_searcher"
@@ -20,6 +22,8 @@ brew "zsh"
 
 # PaaS managers
 brew "awscli"
+brew "circleci"
+brew "contentful-cli"
 brew "kubernetes-cli"
 brew "kubernetes-helm"
 brew "kubectx"
@@ -57,7 +61,7 @@ brew "python"
 brew "wagoodman/dive/dive"
 
 # GUI apps
-cask "alfred"
+cask "alfred3"
 cask "authy"
 cask "boom-3d"
 cask "dash"
@@ -71,25 +75,27 @@ cask "google-cloud-sdk"
 cask "gpg-suite"
 cask "hazeover"
 cask "iina"
-cask "imageoptim"
 cask "iterm2"
 cask "karabiner-elements"
-cask "mysqlworkbench"
 cask "ngrok"
+cask "notion"
+cask "onyx"
 cask "postman"
 cask "protonvpn"
-cask "quicklook-json"
+cask "rectangle"
+cask "sketch"
 cask "skype"
 cask "slack"
 cask "softu2f
-cask "spectacle"
 cask "spotify"
 cask "tableplus"
+cask "telegram"
 cask "transmission"
 cask "visual-studio-code"
 cask "vlc"
 cask "whatsapp"
 cask "zeplin"
+cask "zoomus"
 
 # mac App Store
 mas "GIPHY CAPTURE", id: 668208984
@@ -102,3 +108,5 @@ mas "Reeder", id: 880001334
 mas "The Unarchiver", id: 425424353
 mas "Todoist", id: 585829637
 mas "Trello", id: 1278508951
+mas "Glance", id: 1513574319
+mas "uBlock", id: 1385985095
