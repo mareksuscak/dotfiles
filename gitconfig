@@ -17,6 +17,8 @@
   autocrlf = input
 [merge]
   ff = only
+[pull]
+  ff = only
 [commit]
   template = ~/.gitmessage
 [fetch]
@@ -27,3 +29,8 @@
   path = ~/.gitconfig.local
 [diff]
   colorMoved = zebra
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
