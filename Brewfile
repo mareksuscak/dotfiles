@@ -48,6 +48,7 @@ brew "coreutils"
 brew "yarn"
 
 brew "nodenv"
+brew "nodenv/nodenv/node-build-update-defs"
 brew "rbenv"
 brew "php"
 brew "python"
