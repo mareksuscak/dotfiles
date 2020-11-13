@@ -19,6 +19,7 @@
   ff = only
 [pull]
   ff = only
+  rebase = false
 [commit]
   template = ~/.gitmessage
 [fetch]
