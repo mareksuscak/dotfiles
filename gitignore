@@ -1,4 +1,3 @@
-!tags/
 *.pyc
 *.sw[nop]
 .DS_Store
@@ -12,5 +11,5 @@
 db/*.sqlite3
 log/*.log
 rerun.txt
-tags
 tmp/**/*
+/tags
