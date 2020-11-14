@@ -90,6 +90,7 @@ cask "sketch"
 cask "skype"
 cask "slack"
 cask "softu2f
+cask "rectangle"
 cask "spotify"
 cask "tableplus"
 cask "telegram"
