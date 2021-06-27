@@ -144,7 +144,7 @@ Por ejemplo, `~/dotfiles-local/zsh/configs/pre/virtualenv` hace uso de varias ca
 de shell que tal vez se vean afectadas por tu configuración, por lo tanto cárgalo primero:
 
     # Load the virtualenv wrapper
-    . /opt/homebrew/bin/virtualenvwrapper.sh
+    . /usr/local/bin/virtualenvwrapper.sh
 
 Establecer una vinculación clave puede ocurrir en `~/dotfiles-local/zsh/configs/keys`:
 

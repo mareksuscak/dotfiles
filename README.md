@@ -143,7 +143,7 @@ For example, `~/dotfiles-local/zsh/configs/pre/virtualenv` makes use of various 
 features which may be affected by your settings, so load it first:
 
     # Load the virtualenv wrapper
-    . /opt/homebrew/bin/virtualenvwrapper.sh
+    . /usr/local/bin/virtualenvwrapper.sh
 
 Setting a key binding can happen in `~/dotfiles-local/zsh/configs/keys`:
 
