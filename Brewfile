@@ -1,116 +1,164 @@
-tap "homebrew/cask-versions"
-tap "homebrew/services"
+tap "hashicorp/tap"
+tap "stablyai/orca"
 
 # Unix
+brew "bat"
+brew "colordiff"
+brew "coreutils"
+brew "dust"
+brew "envchain"
+brew "eza"
+brew "ffmpeg"
+brew "fzf"
+brew "gh"
 brew "git"
-brew "git-lfs"
+brew "git-filter-repo"
+brew "graphviz"
+brew "herdr"
+brew "httpie"
+brew "imagemagick"
+brew "inetutils"
 brew "jq"
-brew "yq"
-brew "wget"
-brew "openssl"
-brew "thoughtbot/formulae/rcm"
-brew "reattach-to-user-namespace"
-brew "the_silver_searcher"
+brew "mas"
+brew "mkcert"
+brew "nss"
+brew "opencode"
+brew "pinentry-mac"
+brew "pkgconf"
+brew "rcm"
+brew "rename"
+brew "ripgrep"
+brew "shellcheck"
 brew "tmux"
-brew "vim"
 brew "tree"
+brew "universal-ctags"
+brew "vim"
 brew "watch"
 brew "watchman"
-brew "httpie"
+brew "wget"
+brew "wrk"
+brew "xh"
+brew "yq"
+brew "yt-dlp"
 brew "zsh"
+cask "1password-cli"
+cask "claude-code@latest"
+cask "codex"
+cask "copilot-cli"
 
-# PaaS managers
+# Cloud/DevOps
 brew "awscli"
 brew "circleci"
 brew "contentful-cli"
-brew "kubernetes-cli"
-brew "kubernetes-helm"
+brew "dive"
+brew "eksctl"
+brew "hashicorp/tap/terraform", trusted: true
+brew "k9s"
 brew "kubectx"
-brew "kops"
-brew "packer"
-brew "ansible"
-brew "terraform"
-brew "terragrunt"
-brew "heroku/brew/heroku"
+brew "kubeseal"
+brew "opentofu"
+brew "operator-sdk"
+brew "pixie"
+brew "stripe-cli"
+cask "gcloud-cli"
 
-# Fun
-brew "exercism"
-brew "subliminal"
-
-# GitHub + GitLab
-brew "hub"
-brew "zaquestion/tap/lab"
-brew "jesseduffield/lazygit/lazygit"
-
-# Programming language prerequisites and package managers
-brew "libyaml" # should come after openssl
-brew "coreutils"
+# Languages & runtimes
+brew "elixir"
+brew "go"
+brew "libyaml"
+brew "mise"
+brew "openjdk"
+brew "openssl"
+brew "openssl@3"
+brew "php@8.2"
+brew "python@3.11"
+brew "python@3.12"
+brew "python@3.13"
+brew "rust"
+brew "uv"
 brew "yarn"
+cask "gpg-suite-no-mail"
 
-brew "nodenv"
-brew "nodenv/nodenv/node-build-update-defs"
-brew "rbenv"
-brew "php"
-brew "python"
-
-# Databases (using Docker instead)
-# brew "postgres", restart_service: :changed
-# brew "redis", restart_service: :changed
-
-# Docker
-brew "wagoodman/dive/dive"
-
-# Utils
-brew "mkcert"
+# Databases
+brew "mongosh"
+brew "mysql-client"
+brew "postgresql@18", link: true
+brew "redis"
 
 # GUI apps
-cask "alfred3"
-cask "authy"
-cask "boom-3d"
-cask "dash"
-cask "docker"
+cask "1password"
+cask "affinity"
+cask "alfred"
+cask "arduino-ide"
+cask "betterdisplay"
+cask "bruno"
+cask "chatgpt"
+cask "claude"
+cask "cleanshot"
+cask "daisydisk"
+cask "dash@6"
+cask "discord"
+cask "docker-desktop"
 cask "dropbox"
 cask "figma"
-cask "firefox-developer-edition"
+cask "firefox@developer-edition"
+cask "forklift"
+cask "ghostty"
 cask "github"
 cask "google-chrome"
-cask "google-cloud-sdk"
-cask "gpg-suite"
-cask "hazeover"
+cask "google-drive"
+cask "handbrake-app"
+cask "handy"
+cask "herdr-app"
+cask "homebrew-app"
 cask "iina"
 cask "iterm2"
 cask "karabiner-elements"
+cask "linear"
+cask "lm-studio"
+cask "miro"
+cask "mongodb-compass"
+cask "monitorcontrol"
+cask "netnewswire"
 cask "ngrok"
-cask "notion"
 cask "onyx"
+cask "orbstack"
+cask "pareto-security"
 cask "postman"
 cask "protonvpn"
+cask "proxyman"
 cask "rectangle"
-cask "sketch"
-cask "skype"
 cask "slack"
-cask "softu2f
-cask "rectangle"
 cask "spotify"
+cask "stablyai/orca/orca", trusted: true
+cask "sublime-merge"
+cask "t3-code"
 cask "tableplus"
+cask "tailscale-app"
+cask "teamviewer"
 cask "telegram"
+cask "todoist-app"
+cask "tor-browser"
+cask "tradingview"
 cask "transmission"
+cask "unsloth"
 cask "visual-studio-code"
-cask "vlc"
-cask "whatsapp"
-cask "zeplin"
-cask "zoomus"
+cask "wifiman"
+cask "zed"
+cask "zoom"
 
-# mac App Store
-mas "GIPHY CAPTURE", id: 668208984
+# Mac App Store
+mas "Amphetamine", id: 937984704
 mas "ColorSlurp", id: 1287239339
-mas "ForkLift", id: 412448059
-mas "Keynote", id: 409183694
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "Reeder", id: 1449412482
+mas "Harvest", id: 506189836
+mas "Keynote", id: 361285480
+mas "Notability", id: 360593530
+mas "Numbers", id: 361304891
+mas "Pages", id: 361309726
+mas "TestFlight", id: 899247664
 mas "The Unarchiver", id: 425424353
-mas "Todoist", id: 585829637
+mas "Toggl Track", id: 1291898086
 mas "Trello", id: 1278508951
-mas "Glance", id: 1513574319
-mas "uBlock", id: 1385985095
+mas "WhatsApp", id: 310633997
+mas "Windows App", id: 1295203466
+mas "Xcode", id: 497799835
