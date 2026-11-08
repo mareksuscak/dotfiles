@@ -1,6 +1,6 @@
 # determine package manager and run command with it
 p() {
-  if [[ -f bun.lockb ]]; then
+  if [[ -f bun.lock || -f bun.lockb ]]; then
     command bun "$@"
   elif [[ -f yarn.lock ]]; then
     command yarn "$@"
@@ -18,8 +18,14 @@ p() {
     command go "$@"
   elif [[ -f composer.lock ]]; then
     command composer "$@"
+  elif [[ -f uv.lock ]]; then
+    command uv "$@"
   elif [[ -f requirements.txt ]]; then
-    command pip "$@"
+    if (( $+commands[uv] )); then
+      command uv pip "$@"
+    else
+      command pip "$@"
+    fi
   else
     yarn "$@"
   fi
