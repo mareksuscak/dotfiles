@@ -19,8 +19,8 @@ function vi_mode_info() {
 }
 
 function zle-line-init zle-keymap-select {
-    vi_mode_info
-    zle reset-prompt
+  vi_mode_info
+  zle reset-prompt
 }
 
 zle -N zle-line-init

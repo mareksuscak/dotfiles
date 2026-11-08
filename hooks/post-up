@@ -28,8 +28,6 @@ Warning: \`/etc/zshenv' configuration file on your system may cause unexpected
 PATH changes on subsequent invocations of the zsh shell. The solution is to
 rename the file to \`zprofile':
   sudo mv /etc/{zshenv,zprofile}
-
 (called from ${dir}/post-up:${LINENO})
-
 MSG
 fi

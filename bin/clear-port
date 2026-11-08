@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# Kills the processes listening on the provided port
+#
+# clear-port 3000
+
+if [ -n "$1" ]; then
+  # A port can be held by more than one process, and a forked server's workers
+  # die with the parent, so signal every PID in a single kill.
+  lsof -ti4TCP:"$1" -sTCP:LISTEN | xargs -r kill
+else
+  echo >&2 Usage: clear-port port-number
+  exit 1
+fi

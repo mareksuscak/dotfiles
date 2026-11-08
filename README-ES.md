@@ -15,13 +15,12 @@ Instalar
 
 Clona en tu laptop:
 
-    git clone git://github.com/thoughtbot/dotfiles.git ~/dotfiles
+    git clone git@github.com:thoughtbot/dotfiles.git ~/dotfiles
 
 (o [haz un fork y mantenlo actualizado](http://robots.thoughtbot.com/keeping-a-github-fork-updated)).
 
 Instala [rcm](https://github.com/thoughtbot/rcm):
 
-    brew tap thoughtbot/formulae
     brew install rcm
 
 Instala los dotfiles:
@@ -144,7 +143,7 @@ Por ejemplo, `~/dotfiles-local/zsh/configs/pre/virtualenv` hace uso de varias ca
 de shell que tal vez se vean afectadas por tu configuración, por lo tanto cárgalo primero:
 
     # Load the virtualenv wrapper
-    . /usr/local/bin/virtualenvwrapper.sh
+    . /opt/homebrew/bin/virtualenvwrapper.sh
 
 Establecer una vinculación clave puede ocurrir en `~/dotfiles-local/zsh/configs/keys`:
 
@@ -224,7 +223,7 @@ Alias de Shell y scripts:
 
 * `b` para `bundle`.
 * `g` sin argumentos es `git status` y con argumentos funciona como `git`.
-* `migrate` para `rake db:migrate && rake db:rollback && rake db:migrate`.
+* `migrate` para `bin/rails db:migrate db:rollback && bin/rails db:migrate db:test:prepare`.
 * `mcd` para crear un directorio e ir a él.
 * `replace foo bar **/*.rb` para buscar y reemplazar en una lista dada de archivos.
 * `tat` para adjuntar a una sesión de tmux llamada igual que el directorio actual.
