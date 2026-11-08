@@ -10,6 +10,7 @@ set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitigno
 set history=50
 set ruler         " show the cursor position all the time
 set showcmd       " display incomplete commands
+set termguicolors " make our colors pretty
 set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
@@ -47,7 +48,11 @@ augroup vimrcEx
   " Set syntax highlighting for specific file types
   autocmd BufRead,BufNewFile *.md set filetype=markdown
   autocmd BufRead,BufNewFile .{jscs,jshint,eslint}rc set filetype=json
-  autocmd BufRead,BufNewFile aliases.local,zshrc.local,*/zsh/configs/* set filetype=sh
+  autocmd BufRead,BufNewFile
+    \ aliases.local,
+    \zshenv.local,zlogin.local,zlogout.local,zshrc.local,zprofile.local,
+    \*/zsh/configs/*
+    \ set filetype=sh
   autocmd BufRead,BufNewFile gitconfig.local set filetype=gitconfig
   autocmd BufRead,BufNewFile tmux.conf.local set filetype=tmux
   autocmd BufRead,BufNewFile vimrc.local set filetype=vim
@@ -86,18 +91,24 @@ set list listchars=tab:»·,trail:·,nbsp:·
 " Use one space, not two, after punctuation.
 set nojoinspaces
 
+" Use ripgrep https://github.com/BurntSushi/ripgrep
+if executable('rg')
+  " Use Rg over Grep
+  set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
+
+  " Use rg in fzf for listing files. Lightning fast and respects .gitignore
+  let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
+
+  nnoremap \ :Rg<SPACE>
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
-if executable('ag')
+elseif executable('ag')
   " Use Ag over Grep
   set grepprg=ag\ --nogroup\ --nocolor
 
   " Use ag in fzf for listing files. Lightning fast and respects .gitignore
   let $FZF_DEFAULT_COMMAND = 'ag --literal --files-with-matches --nocolor --hidden -g ""'
 
-  if !exists(":Ag")
-    command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-    nnoremap \ :Ag<SPACE>
-  endif
+  nnoremap \ :Ag<SPACE>
 endif
 
 " Make it obvious where 80 characters is
@@ -125,12 +136,6 @@ inoremap <S-Tab> <C-n>
 
 " Switch between the last two files
 nnoremap <Leader><Leader> <C-^>
-
-" Get off my lawn
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
 
 " vim-test mappings
 nnoremap <silent> <Leader>t :TestFile<CR>
@@ -174,6 +179,9 @@ set complete+=kspell
 
 " Always use vertical diffs
 set diffopt+=vertical
+
+" Use Catpuccin Latte as our default color scheme
+colorscheme catppuccin_latte
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")

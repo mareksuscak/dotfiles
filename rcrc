@@ -1,3 +1,3 @@
-EXCLUDES="README*.md LICENSE Brewfile"
+EXCLUDES="*.md LICENSE CODEOWNERS Brewfile"
 DOTFILES_DIRS="$HOME/dotfiles-local $HOME/.dotfiles-local $HOME/dotfiles $HOME/.dotfiles"
 COPY_ALWAYS="git_template/HEAD"

@@ -6,7 +6,13 @@ alias e="$EDITOR"
 alias v="$VISUAL"
 
 # Pretty print the path
-alias path='echo $PATH | tr -s ":" "\n"'
+alias path='echo -e ${PATH//:/\\n}'
+
+# Easier navigation: ..., ...., ....., and -
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias -- -="cd -"
 
 # Include custom aliases
 if [[ -f ~/.aliases.local ]]; then
